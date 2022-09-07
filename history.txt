@@ -1,0 +1,54 @@
+node & npm install
+npm init
+npm i react react-dom   
+npm i -D webpack webpack-cli (실제 서비스에서는 필요없음) 
+webpack.config.js 파일 만들기
+
+    module.exports = {
+
+    };
+
+
+client.jsx 파일 만들기
+
+
+
+// 4. npm i -D react-refresh @pmmmwh/react-refresh-webpack-plugin 
+// 5. npm i -D webpack-dev-server 
+
+// 웹팩 쓰는 이유 : 컴포넌트가 엄청 많음
+
+
+파일 하나로 합치는 방법
+
+
+
+webpack.config.js
+
+const path = require('path');
+    name : 'self-test',
+    mode : 'development',
+    devtool: 'eval',
+    resolve: {
+        extensions: ['js', 'jsx']
+    }
+
+
+    entry: {
+        app : {'./client.jsx'},
+    }, // 입력
+
+    output: {
+        path: path.join(__dirname, 'dist'),
+        filename: 'app.js',
+    }, // 출력
+
+babel, jsx 설정해야지 jsx 파일의 문법을 이용
+ // 4. npm i -D @babel/core         // babel 기본
+        // 5. npm i -D @babel/preset-env      // 브라우저에 맞게 문법 지원
+        // 6. npm i -D @babel/preset-react    // jsx 지원
+        // 7. npm i -D babel-loader    // babel이랑 webpack을 연결해줌 
+        // 8. npm i -D @babel/plugin-proposal-class-properties // state
+       
+
+npm i react-router-dom@6
